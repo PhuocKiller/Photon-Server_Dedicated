@@ -20,11 +20,11 @@ public class CubeController : NetworkBehaviour
             var dataInput = GetInput<CubeInput>().Value;
             if (dataInput.AKey != 0x00)
             {
-                transform.position += Vector3.left;
+                transform.position += Vector3.left * Runner.DeltaTime * 3;
             }
             if (dataInput.BKey == 0x02)
             {
-                transform .position += Vector3.right;
+                transform .position += Vector3.right * Runner.DeltaTime * 3;
             }
         }
     }
